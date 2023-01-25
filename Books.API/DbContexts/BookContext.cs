@@ -3,11 +3,11 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Books.API.DbContexts
 {
-    public class BookContext : DbContext
+    public class BooksContext : DbContext
     {
         public DbSet<Book> Books { get; set; } = null!;
 
-        public BookContext(DbContextOptions<BookContext> options)
+        public BooksContext(DbContextOptions<BooksContext> options)
             : base(options) { }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

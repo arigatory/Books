@@ -7,7 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 
-builder.Services.AddDbContext<BookContext>(options => 
+builder.Services.AddDbContext<BooksContext>(options => 
     options.UseSqlite(
         builder.Configuration["ConnectionStrings:BooksDBConnectionString"]));
 
